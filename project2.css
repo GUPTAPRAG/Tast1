@@ -1,0 +1,103 @@
+@import url("https://rsms.me/inter/inter.css");
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+html {
+  --poster-size: 95vmin;
+  --ratio: 0.6792198582;
+  --inner-ratio: 0.8474576271;
+  font-family: "Inter", sans-serif;
+  font-size: calc(var(--poster-size) / 100);
+}
+body {
+  display: grid;
+  min-height: 100vh;
+  background: #030303;
+  place-items: center;
+}
+.poster {
+  --color--background: #b8b6a8;
+  --color--neutral: #040101;
+  --color--white: #f0d8c8;
+  --color--back: #d53b2b;
+  font-size: 1.2rem;
+  font-weight: 600;
+  position: relative;
+  display: grid;
+  overflow: hidden;
+  width: calc(var(--poster-size) * var(--ratio));
+  height: var(--poster-size);
+  color: var(--color--neutral);
+  background-color: var(--color--back);
+  
+}
+.poster__inner {
+  display: grid;
+  width: calc(var(--poster-size) * var(--inner-ratio));
+  transform: translateX(7rem) translateY(13rem) rotate(-45deg);
+  grid-template-columns: 0.5fr 1.2fr 1fr 1.3fr 2.2fr;
+  grid-column-gap: 2rem;
+  align-content: start;
+
+}
+.poster__location {
+  grid-column: 4;
+}
+.poster__header {
+  grid-column: 4 / -1;
+  font-size: 5.9rem;
+  font-weight: 700;
+  margin: 1rem 0;
+  letter-spacing: -0.3rem;
+}
+.poster__date {
+  grid-column: 4;
+}
+.poster__highlight {
+  grid-column: 2 / span 2;
+  font-size: 5.9rem;
+  font-weight: 700;
+  margin: 1rem 0;
+  letter-spacing: -0.3rem;
+}
+.poster__highlight--red {
+  color: var(--color--white);
+  padding: 0;
+  margin: 0;
+  margin-left: 120px;
+  line-height: 0.8;
+  
+}
+.poster__highlight--blue {
+  color: var(--color--white);
+  padding: 0;
+  margin: 0;
+
+}
+.poster__highlight--purple {
+  color: var(--color--white);
+  line-height: 0.8;
+  
+}
+.poster__highlight--green {
+  color: var(--color--white);
+  margin-left: 110px;
+  line-height: 0.8;
+
+}
+.poster__highlight--right {
+  grid-column: 4 / -1;
+}
+.poster__name {
+  text-align: right;
+  grid-column: 3;
+}
+.poster__performance {
+  grid-column: 4;
+}
+.poster__ensemble {
+  display: grid;
+  grid-column: span 5;
+  grid-auto-flow: column;
+}
+
